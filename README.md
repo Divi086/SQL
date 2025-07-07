@@ -23,3 +23,8 @@ Next, I used a LEFT JOIN to get all students, whether or not they had marks. For
 To simulate a FULL OUTER JOIN (not directly supported in all SQL systems), I combined the LEFT and RIGHT JOIN results using the UNION operator. This returned all students and all marks, matched or unmatched.
 
 Overall, this task helped me clearly understand how JOINs behave with partial or mismatched data. The Programiz compiler made it easy to test and view the results instantly, helping me learn SQL more effectively.
+
+
+OUTPUT:
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/03d12c97-fbe7-4711-84d3-2d23061fb3c4" />
