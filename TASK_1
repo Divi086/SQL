@@ -1,0 +1,50 @@
+DROP TABLE IF EXISTS Students;
+DROP TABLE IF EXISTS Marks;
+
+CREATE TABLE Students (
+    student_id INT,
+    name VARCHAR(50)
+);
+
+INSERT INTO Students VALUES
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie'),
+(4, 'David');
+
+CREATE TABLE Marks (
+    student_id INT,
+    subject VARCHAR(50),
+    marks INT
+);
+
+INSERT INTO Marks VALUES
+(1, 'Math', 85),
+(2, 'Science', 90),
+(4, 'Math', 78),
+(5, 'Science', 88);
+
+SELECT Students.student_id, name, subject, marks
+FROM Students
+INNER JOIN Marks
+ON Students.student_id = Marks.student_id;
+
+SELECT Students.student_id, name, subject, marks
+FROM Students
+LEFT JOIN Marks
+ON Students.student_id = Marks.student_id;
+
+SELECT Students.student_id, name, subject, marks
+FROM Students
+LEFT JOIN Marks
+ON Students.student_id = Marks.student_id
+
+UNION
+
+SELECT Marks.student_id, name, subject, marks
+FROM Marks
+LEFT JOIN Students
+ON Students.student_id = Marks.student_id;
+
+
+
